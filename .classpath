@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="src" path="/AlgorithmsAssignment2"/>
+	<classpathentry kind="src" path="/AlgorithmsAssignment1"/>
 	<classpathentry kind="src" path="/MovieAssignment"/>
 	<classpathentry kind="lib" path="/MovieAssignment/stdlib-package.jar"/>
 	<classpathentry kind="lib" path="/pacemaker/lib/asg.cliche-110413.jar"/>
