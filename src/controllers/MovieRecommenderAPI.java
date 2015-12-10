@@ -314,6 +314,16 @@ public class MovieRecommenderAPI
 
 	}
 
+	public Rating addRating(int rating, Long movieId, int rating2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Rating getRating(int rating) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
 

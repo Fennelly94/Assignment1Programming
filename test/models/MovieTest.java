@@ -37,7 +37,7 @@ public class MovieTest
 			ids.add(movie.id);
 		}
 		assertEquals (movies.length, ids.size());
-		//test that each objects id witch each other to ensure they are the same
+		//test that each objects id with each other to ensure they are the same
 		for(int i = 0; i<movies.length;i++)
 		{
 			assertEquals(movies[i].id,movies[i].id);
@@ -51,46 +51,7 @@ public class MovieTest
 	}
 
 
-	@Test
-	public void testEquals()
-	{
-		Movie movie2 = new Movie ("gavsFilm", "2018","www.gavsfilm.co.uk"); 
-		Movie movie3  = new Movie ("pokemon", "2015","www.gavsfilm.co.uk"); 
 
-		assertEquals(movie, movie);
-		assertEquals(movie, movie2);
-		assertNotEquals(movie, movie3);
-	} 
-
-	@Test
-	public void getMovieById() throws Exception
-	{
-		File usersFile = new File("testdatastore.xml");
-		Serializer serializer = new XMLSerializer(usersFile);
-		MovieRecommenderAPI movieRecommender = new MovieRecommenderAPI(serializer);
-		Data data = new Data();
-
-		List<Movie> movies = data.importMovies("data/items5.dat");
-		for(Movie movie : movies)
-		{
-			movieRecommender.addMovie(movie);
-		}
-		movieRecommender.store();
-
-		//loads movieRecommender2 with the new data and tests their equality
-		MovieRecommenderAPI movieRecommender2 =  new MovieRecommenderAPI(serializer);
-		movieRecommender2.load();
-
-		/*the for loop will go through each user in movieRecommender
-		 * and will get the id's of each user. It will then test the movieRecommender
-		 * id's against the id's of movieRecommender2 assuring that the getUser(id) function
-		 * is working correctly.
-		 */
-		for (Movie movie : movieRecommender.getMovies())
-		{
-			assertEquals(movie.id,movieRecommender2.getMovie(movie.id).id);
-		}
-	}
 }
 
 
